@@ -4,7 +4,7 @@ import sortBy from "lodash/sortBy";
 import Helmet from "react-helmet";
 import LazyLoad from "react-lazyload";
 
-import SitePost from "../../components/SitePost";
+import Post from "../../componentspost";
 
 class BlogIndex extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
       if (layout === "post" && path !== "/404/") {
         pageLinks.push(
           <LazyLoad height={500} offset={500} once key={i}>
-            <SitePost data={data.post} site={site} isIndex key={i} />
+            <Post data={data.post} site={site} isIndex key={i} />
           </LazyLoad>
         );
       }

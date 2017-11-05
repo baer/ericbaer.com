@@ -3,8 +3,8 @@ import Helmet from "react-helmet";
 import React from "react";
 import striptags from "striptags";
 
-import SitePost from "../components/SitePost";
-import SitePage from "../components/SitePage";
+import Post from "../componentspost";
+import Page from "../componentspage";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -16,9 +16,9 @@ class BlogPostTemplate extends React.Component {
 
     let template = "";
     if (layout !== "page") {
-      template = <SitePost data={post} site={site} isIndex={false} />;
+      template = <Post data={post} site={site} isIndex={false} />;
     } else {
-      template = <SitePage {...this.props} />;
+      template = <Page {...this.props} />;
     }
     return (
       <div>

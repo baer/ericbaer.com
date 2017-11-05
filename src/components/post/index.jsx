@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "gatsby-link";
 import get from "lodash/get";
-import ReadNext from "../ReadNext";
+import ReadNext from "./read-next";
 import "./style.scss";
 
-class SitePost extends React.Component {
+class Post extends React.Component {
   more(body, path) {
     if (body.match("<!--more-->")) {
       return (
@@ -81,4 +81,4 @@ class SitePost extends React.Component {
   }
 }
 
-export default SitePost;
+export default Post;
