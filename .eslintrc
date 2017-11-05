@@ -22,7 +22,7 @@
   "rules": {
     "react/prop-types": "off",
     "import/no-unresolved": "off",
-    "prettier/prettier": [ "error", { "trailingComma": "all" } ]
+    "prettier/prettier": [ "error", { "trailingComma": "es5" } ]
   },
   globals: {
     "graphql": false
