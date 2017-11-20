@@ -4,7 +4,7 @@ import sortBy from "lodash/sortBy";
 import Helmet from "react-helmet";
 import LazyLoad from "react-lazyload";
 
-import Post from "../../componentspost";
+import Post from "../../components/post";
 
 class BlogIndex extends React.Component {
   render() {

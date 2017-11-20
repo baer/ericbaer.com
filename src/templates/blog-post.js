@@ -3,8 +3,8 @@ import Helmet from "react-helmet";
 import React from "react";
 import striptags from "striptags";
 
-import Post from "../componentspost";
-import Page from "../componentspage";
+import Post from "../components/post";
+import Page from "../components/page";
 
 class BlogPostTemplate extends React.Component {
   render() {
