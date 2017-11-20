@@ -28,6 +28,9 @@ class MainNavigation extends React.Component {
                     : "nav-item"
                 }
               >
+                <Link to="/books/technology-brief-react/" className="nav-link">
+                  Books
+                </Link>
                 {/* <Link to="/blog/" className="nav-link">
                   Blog
                 </Link> */}
