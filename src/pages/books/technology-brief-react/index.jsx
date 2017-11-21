@@ -102,7 +102,7 @@ const Profile = () => {
                       value="Subscribe"
                       name="subscribe"
                       id="mc-embedded-subscribe"
-                      className="button"
+                      className="btn btn-primary"
                     />
                   </div>
                 </div>
