@@ -7,6 +7,14 @@ const Profile = () => {
     <div>
       <section className="jumbotron text-center">
         <div className="container">
+          <img
+            src="../../img/book-cover.png"
+            width="350"
+            height="568"
+            className="rounded float-left"
+            alt="Technology Briefing: React book cover"
+          />
+
           <h1 className="jumbotron-heading">Technology Briefing: React</h1>
 
           <p>
@@ -23,12 +31,6 @@ const Profile = () => {
           </p>
 
           <div>
-            <link
-              href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
-              rel="stylesheet"
-              type="text/css"
-            />
-
             <div id="mc_embed_signup">
               <form
                 action="https://ericbaer.us17.list-manage.com/subscribe/post?u=ae61dc4ef28f7a97effd0d937&amp;id=af0ba244cb"
@@ -37,15 +39,18 @@ const Profile = () => {
                 name="mc-embedded-subscribe-form"
                 className="validate"
                 target="_blank"
-                noValidate
+                noValidate="novalidate"
               >
                 <div id="mc_embed_signup_scroll">
+                  <h2>Subscribe to our mailing list</h2>
                   <div className="indicates-required">
-                    <span className="asterisk">*</span> indicates required
+                    <span className="asterisk">*</span>
+                    indicates required
                   </div>
                   <div className="mc-field-group">
                     <label htmlFor="mce-EMAIL">
-                      Email Address <span className="asterisk">*</span>
+                      Email Address
+                      <span className="asterisk">*</span>
                     </label>
                     <input
                       type="email"
@@ -57,7 +62,8 @@ const Profile = () => {
                   </div>
                   <div className="mc-field-group">
                     <label htmlFor="mce-NAME">
-                      Name <span className="asterisk">*</span>
+                      Full Name
+                      <span className="asterisk">*</span>
                     </label>
                     <input
                       type="text"
