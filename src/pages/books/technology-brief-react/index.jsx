@@ -5,13 +5,13 @@ import "./style.scss";
 const Profile = () => {
   return (
     <div>
-      <section className="jumbotron text-center">
+      <section className="jumbotron text-center mainContainer">
         <div className="container">
           <img
             src="../../img/book-cover.png"
             width="350"
             height="568"
-            className="rounded float-left"
+            className="rounded float-left bookCover"
             alt="Technology Briefing: React book cover"
           />
 
@@ -42,7 +42,7 @@ const Profile = () => {
                 noValidate="novalidate"
               >
                 <div id="mc_embed_signup_scroll">
-                  <h2>Subscribe to our mailing list</h2>
+                  <h2>Get updated when it's available!</h2>
                   <div className="indicates-required">
                     <span className="asterisk">*</span>
                     indicates required
