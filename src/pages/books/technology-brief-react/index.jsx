@@ -8,7 +8,7 @@ const Profile = () => {
       <section className="jumbotron text-center mainContainer">
         <div className="container">
           <img
-            src="../../img/book-cover.png"
+            src="../../img/book-cover-small.png"
             width="350"
             height="568"
             className="rounded float-left bookCover"
