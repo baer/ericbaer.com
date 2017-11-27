@@ -31,10 +31,29 @@ class MainNavigation extends React.Component {
                 <Link to="/books/technology-brief-react/" className="nav-link">
                   Books
                 </Link>
-                {/* <Link to="/blog/" className="nav-link">
-                  Blog
-                </Link> */}
               </li>
+              <li
+                className={
+                  location.pathname === "/graphql/"
+                    ? "nav-item active"
+                    : "nav-item"
+                }
+              >
+                <Link to="/graphql/" className="nav-link">
+                  GraphQL
+                </Link>
+              </li>
+              {/* <li
+                className={
+                  location.pathname === "/blog/"
+                    ? "nav-item active"
+                    : "nav-item"
+                }
+              >
+                <Link to="/blog/" className="nav-link">
+                  Blog
+                </Link>
+              </li> */}
             </ul>
           </div>
           <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
