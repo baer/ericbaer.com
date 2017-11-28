@@ -5,6 +5,8 @@ import "./style.scss";
 const Profile = () => {
   return (
     <div className="container profileMainContent">
+      <h1 className="text-center">A List of GraphQL Resources</h1>
+
       <main role="main">
         <div className="jumbotron">
           <p className="text-center">
