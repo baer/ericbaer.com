@@ -1,7 +1,5 @@
 import React from "react";
 
-import MailchimpForm from "../../../components/mailchip-form";
-
 import "./style.scss";
 
 const ReactBook = () => {
