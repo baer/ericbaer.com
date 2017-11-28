@@ -87,8 +87,8 @@ $font-family-monospace: "BasisGrotesqueProMonoRegular", "andale mono",
   monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
-$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg: 1.25rem !default;
+$font-size-base: 1.33rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: 1.66rem !default;
 $font-size-sm: 0.875rem !default;
 $font-size-xs: 0.75rem !default;
 
@@ -98,8 +98,8 @@ $font-weight-bold: bold !default;
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
 
-$h1-font-size: 1.6rem !default;
-$h2-font-size: 1.4rem !default;
+$h1-font-size: 3.2rem !default;
+$h2-font-size: 2rem !default;
 $h3-font-size: 1.2rem !default;
 $h4-font-size: 1.1rem !default;
 $h5-font-size: 1.05rem !default;
@@ -134,15 +134,11 @@ body {
   background-image: url("/img/overlay.png"),
     -ms-linear-gradient(60deg, rgba(230, 140, 125, 0.5) 20%, rgba(0, 203, 230, 0.5));
   background-image: url("/img/overlay.png"),
-    linear-gradient(
-      60deg,
-      rgba(230, 140, 125, 0.5) 20%,
-      rgba(0, 203, 230, 0.5)
-    );
+    linear-gradient(60deg, rgba(230, 140, 125, 0.5) 20%, rgba(0, 203, 230, 0.5));
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
