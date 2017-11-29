@@ -27,8 +27,18 @@ const ReactBook = () => {
             <div>
               <p>
                 The decision to change your underlying technologies is so
-                critical to how teams function that it is essential to have
-                buy-in from everybody at the table - not just developers.
+                critical, that it is essential to have buy-in from everybody at
+                the table - not just developers.
+              </p>
+              <p>
+                The goal of this book is not to teach you React - there are lots
+                amazing resources for that. The goal of this book is to explain
+                how React came to be, it's main innovations, and its basic
+                conccepts to <i>anybody</i>. Whether you're a PM who wants to be
+                more conversational about your team's technology or an
+                Engineering Manager who wants to understand how your apps are
+                built, this book should give you everything you need to know to
+                get started.
               </p>
             </div>
 
