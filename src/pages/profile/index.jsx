@@ -51,7 +51,7 @@ const Profile = () => {
         </div>
       </main>
 
-      <footer className="footer">
+      <footer className="footer text-center">
         <p>&copy; Eric Baer 2017</p>
       </footer>
     </div>
