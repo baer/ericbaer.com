@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Eric Baer",
     description: "Blog and personal website",
-    url: "https://jaxx2104.github.io/gatsby-starter-bootstrap",
+    url: "https://www.ericbaer.com",
     author: "Eric Baer",
     twitter: "ebaerbaerbaer",
   },

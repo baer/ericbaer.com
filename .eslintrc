@@ -8,21 +8,14 @@
     "react",
     "prettier"
   ],
-  "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
   "env": {
-    "es6": true,
     "node": true
   },
   "rules": {
-    "react/prop-types": "off",
     "import/no-unresolved": "off",
-    "prettier/prettier": [ "error", { "trailingComma": "es5" } ]
+    "no-magic-numbers": "off",
+    "prettier/prettier": [ "error", { "trailingComma": "es5" } ],
+    "react/prop-types": "off"
   },
   globals: {
     "graphql": false

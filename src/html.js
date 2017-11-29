@@ -46,7 +46,22 @@ export default class HTML extends React.Component {
           {/* MailChimp */}
           <div
             dangerouslySetInnerHTML={{
-              __html: `<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"ae61dc4ef28f7a97effd0d937","lid":"af0ba244cb"}) })</script>`,
+              __html: `
+                <script
+                  type="text/javascript"
+                  src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js"
+                  data-dojo-config="usePlainJson: true, isDebug: false"
+                >
+                </script>
+                <script type="text/javascript">
+                  require(["mojo/signup-forms/Loader"], function(L) {
+                    L.start({
+                      "baseUrl":"mc.us17.list-manage.com",
+                      "uuid":"ae61dc4ef28f7a97effd0d937",
+                      "lid":"af0ba244cb"
+                    }) 
+                  })
+                </script>`,
             }}
           />
         </body>
