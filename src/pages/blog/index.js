@@ -6,6 +6,8 @@ import LazyLoad from "react-lazyload";
 
 import Post from "../../components/post";
 
+import "./style.scss";
+
 class BlogIndex extends React.Component {
   render() {
     const pageLinks = [];
@@ -45,7 +47,7 @@ class BlogIndex extends React.Component {
             },
           ]}
         />
-        {pageLinks}
+        <div className="container blogContainer">{pageLinks}</div>
       </div>
     );
   }
