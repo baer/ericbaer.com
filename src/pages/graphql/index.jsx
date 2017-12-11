@@ -27,7 +27,9 @@ const Profile = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.ericbaer.com/graphql">GraphQL Demo Code</a>
+                <a href="https://github.com/baer/graphql-demo-graphql-for-the-rest-of-us">
+                  GraphQL Demo Code
+                </a>
               </li>
             </ul>
           </p>
