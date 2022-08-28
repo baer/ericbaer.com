@@ -1,4 +1,18 @@
-node_modules
-public
-.cache
-package.json
+# dependencies
+/node_modules
+
+# husky configuration
+/husky
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js
+/.next
+/public
+
+# compiled files
+/dist

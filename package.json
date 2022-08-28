@@ -3,90 +3,38 @@
   "description": "Eric Baer's personal website and blog",
   "version": "1.0.0",
   "author": "Eric Baer",
-  "dependencies": {
-    "gatsby": "^1.9.36",
-    "gatsby-link": "^1.6.16",
-    "gatsby-plugin-google-analytics": "^1.0.7",
-    "gatsby-plugin-manifest": "^1.0.7",
-    "gatsby-plugin-nprogress": "^1.0.7",
-    "gatsby-plugin-offline": "^1.0.9",
-    "gatsby-plugin-preact": "^1.0.11",
-    "gatsby-plugin-react-helmet": "^1.0.6",
-    "gatsby-plugin-sass": "^1.0.12",
-    "gatsby-plugin-sharp": "^1.6.7",
-    "gatsby-remark-copy-linked-files": "^1.5.7",
-    "gatsby-remark-images": "^1.5.11",
-    "gatsby-remark-prismjs": "^1.2.8",
-    "gatsby-remark-responsive-iframe": "^1.4.7",
-    "gatsby-remark-smartypants": "^1.4.7",
-    "gatsby-source-filesystem": "^1.4.12",
-    "gatsby-transformer-remark": "^1.7.7",
-    "gatsby-transformer-sharp": "^1.6.5",
-    "lodash": "^4.17.4",
-    "react-lazyload": "^2.2.7",
-    "react-responsive-grid": "^0.3.4",
-    "react-tap-event-plugin": "^2.0.1",
-    "react-typography": "^0.16.5"
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build:production": "NODE_ENV=production next build && NODE_ENV=production next export -o dist",
+    "build:dev": "NODE_ENV=development next build --profile && NODE_ENV=development next export -o dist",
+    "serve-static": "nodemon --watch dist --exec 'serve dist -l 7000'",
+    "analyze-code:lint-js": "next lint",
+    "analyze-code:prettier": "prettier --list-different '**/*.{js,jsx,ts,tsx,json,css,md,yaml}'",
+    "analyze-code": "npm run analyze-code:lint-js && npm run analyze-code:prettier",
+    "fix:lint-js": "next lint",
+    "fix:prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md,yaml}'",
+    "fix": "npm run fix:lint-js && npm run fix:prettier",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "animate.css": "^3.5.2",
-    "babel-eslint": "^8.0.0",
-    "bootstrap": "^4.0.0-beta",
-    "devicon": "git+https://github.com/konpa/devicon.git#v2.2",
-    "eslint": "^4.7.0",
-    "eslint-config-formidable": "^3.0.0",
-    "eslint-config-prettier": "^2.5.0",
-    "eslint-plugin-filenames": "^1.2.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.2.0",
-    "eslint-plugin-react": "^7.3.0",
-    "font-awesome": "^4.7.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.0.0",
-    "moment": "^2.18.1",
-    "normalize.css": "^7.0.0",
-    "prettier": "^1.7.0",
-    "striptags": "^3.1.0",
-    "textlint": "^9.1.1",
-    "textlint-plugin-markdown": "^3.0.3",
-    "textlint-plugin-text": "^2.0.3",
-    "wowjs": "^1.1.3"
-  },
-  "license": "MIT",
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.css": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.scss": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.md": [
-      "npm run lint:textfix",
-      "git add"
-    ]
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:text": "textlint src/pages/**/index.md",
-    "lint:textfix": "textlint --fix src/pages/**/index.md",
-    "precommit": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": "~8"
+    "@emotion/cache": "11.10.3",
+    "@emotion/react": "11.10.4",
+    "@emotion/server": "11.10.0",
+    "@emotion/styled": "11.10.4",
+    "@mui/icons-material": "5.10.3",
+    "@mui/material": "5.10.3",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "8.5.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "next": "12.2.5",
+    "nodemon": "2.0.19",
+    "prettier": "2.7.1",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "serve": "14.0.1"
   }
 }
