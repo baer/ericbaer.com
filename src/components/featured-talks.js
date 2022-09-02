@@ -53,7 +53,7 @@ export default function AlignItemsList() {
                 GraphQL Under the Hood, GraphQL Summit 2017
               </Link>
             }
-            secondary="A deep dive into GraphQL's specification with a focus on what happens when a GraphQL operation runs, from the lexer to the CompleteField method. As it turns out, there is much more room for improvisation than you'd expect."
+            secondary="A deep dive into GraphQL's specification and a walkthrough of what happens when a GraphQL operation runs, from the lexer to the spec's CompleteField method."
           />
         </ListItem>
         <Divider variant="inset" component="li" />
@@ -74,7 +74,7 @@ export default function AlignItemsList() {
                 The Evolution of API Design: From RPC to GraphQL, VueConf 2017
               </Link>
             }
-            secondary="This talk attempts to lay bare the lessons of 60 years of API development, from RPC to REST. With mounting pressure from mobile and distributed computing, RESTs viability is waning, and this talk presents emerging designs like GraphQL as a post-REST paradigm (but not a silver bullet)."
+            secondary="A discussion of RESTs challenges and a presentation of emerging designs like GraphQL as a post-REST paradigm (but not a silver bullet)."
           />
         </ListItem>
       </List>
