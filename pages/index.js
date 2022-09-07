@@ -11,6 +11,7 @@ import Copyright from "../src/components/copyright";
 import FeaturedPublications from "../src/components/featured-publications";
 import FeaturedTalks from "../src/components/featured-talks";
 import Karaoke from "../src/components/karaoke";
+import FeaturedProjects from "../src/components/featured-projects";
 
 export default function SignUp() {
   return (
@@ -56,6 +57,9 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12}>
               <FeaturedPublications />
+            </Grid>
+            <Grid item xs={12}>
+              <FeaturedProjects />
             </Grid>
             <Grid item xs={12}>
               <Karaoke />
