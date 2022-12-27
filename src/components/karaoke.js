@@ -1,19 +1,18 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+
+import FeaturedSection from "./layout/featured-section";
 
 export default function AlignItemsList() {
+  const content = (
+    <Typography sx={{ ml: 3, mt: 2, mb: 2 }}>Apeman, the Kinks</Typography>
+  );
+
   return (
-    <Container>
-      <Typography variant="h5">Go-to Karaoke Song</Typography>
-      <Typography
-        sx={{
-          marginTop: 3,
-          marginLeft: 3,
-        }}
-      >
-        Apeman, the Kinks
-      </Typography>
-    </Container>
+    <FeaturedSection
+      color="#f8dffa"
+      heading="Go-to Karaoke Song"
+      content={content}
+    />
   );
 }
