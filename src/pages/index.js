@@ -7,11 +7,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import IconButton from "@mui/material/IconButton";
 
-import Copyright from "../src/components/copyright";
-import Karaoke from "../src/components/karaoke";
-import Projects from "../src/components/projects";
-import Publications from "../src/components/publications";
-import Talks from "../src/components/talks";
+import Copyright from "../components/copyright";
+import Karaoke from "../components/karaoke";
+import Projects from "../components/projects";
+import Publications from "../components/publications";
+import Talks from "../components/talks";
 
 export default function SignUp() {
   return (

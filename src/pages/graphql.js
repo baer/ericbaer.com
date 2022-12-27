@@ -4,8 +4,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
-import Link from "../src/components/link";
-import Copyright from "../src/components/copyright";
+import Link from "../components/link";
+import Copyright from "../components/copyright";
 
 export default function About() {
   return (
