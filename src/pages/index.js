@@ -7,6 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import IconButton from "@mui/material/IconButton";
 
+import StackOverflowIcon from "../components/icon-stack-overflow";
 import Copyright from "../components/copyright";
 import Karaoke from "../components/karaoke";
 import Projects from "../components/projects";
@@ -26,26 +27,36 @@ export default function SignUp() {
       >
         <Typography variant="h2">Eric Baer</Typography>
 
-        {/* TODO: Consider Stack Overflow and GH */}
+        {/* TODO: Consider adding GH */}
         <Grid container>
-          <Grid item xs={6} display="flex" justifyContent="right">
+          <Grid item xs={4} display="flex" justifyContent="right">
             <IconButton
               sx={{ marginRight: 2 }}
-              aria-label="upload picture"
+              aria-label="LinkedIn link"
               component="a"
               href="https://www.linkedin.com/in/ericjbaer"
             >
               <LinkedInIcon sx={{ fontSize: 50 }} />
             </IconButton>
           </Grid>
-          <Grid item xs={6} display="flex" justifyContent="leftt">
+          <Grid item xs={4} display="flex" justifyContent="center">
             <IconButton
               sx={{ marginLeft: 2 }}
-              aria-label="upload picture"
+              aria-label="Twitter link"
               component="a"
               href="https://twitter.com/ebaerbaerbaer"
             >
               <TwitterIcon sx={{ fontSize: 50 }} />
+            </IconButton>
+          </Grid>
+          <Grid item xs={4} display="flex" justifyContent="left">
+            <IconButton
+              sx={{ marginRight: 2 }}
+              aria-label="StackOverflow link"
+              component="a"
+              href="https://stackoverflow.com/users/856873/baer"
+            >
+              <StackOverflowIcon sx={{ fontSize: 50 }} />
             </IconButton>
           </Grid>
         </Grid>
