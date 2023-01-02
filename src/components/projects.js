@@ -16,11 +16,12 @@ export default function AlignItemsList() {
           <Image
             src="/images/rockies-social-preview.png"
             alt="Website Social Preview"
-            height={40}
-            width={40}
+            height={78.5}
+            width={150}
           />
         </ListItemAvatar>
         <ListItemText
+          sx={{ marginLeft: 3 }}
           primary={
             <Link
               color="text.primary"
