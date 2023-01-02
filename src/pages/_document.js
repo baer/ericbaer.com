@@ -17,6 +17,14 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           <meta name="emotion-insertion-point" content="" />
+
+          {/* Cloudflare Web Analytics */}
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "c6578cc0825e4071a6f030a9b5267436"}'
+          />
+
           {this.props.emotionStyleTags}
         </Head>
         <body>
