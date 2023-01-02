@@ -16,7 +16,14 @@ export default function FeaturedSection({ color, heading, content }) {
           filter: "drop-shadow(10px 10px 0px #4444dd)",
         }}
       >
-        <Typography sx={{ pt: 3, pl: 3, pr: 3 }} variant="h5">
+        <Typography
+          sx={{
+            pt: 3,
+            pl: 3,
+            pr: 3,
+          }}
+          variant="h5"
+        >
           {heading}
         </Typography>
 

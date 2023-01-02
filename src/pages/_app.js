@@ -18,6 +18,8 @@ export default function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <title>Baerly Working</title>
+        <meta name="description" content="The personal website of Eric Baer" />
       </Head>
       <ThemeProvider theme={theme}>
         {/* That Fancy Background Gradient */}
