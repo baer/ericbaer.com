@@ -1,0 +1,56 @@
+name: Test and Deploy
+
+on:
+  # Cloudflare only deploys the "main" branch to Production. All other branches
+  # (like PRs) are deployed as previews.
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+  # Allow Manual Runs
+  workflow_dispatch:
+
+jobs:
+  static-analysis:
+    name: Static Analysis
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependendencies
+      - name: Static Analysis
+        uses: ./.github/actions/static-analysis
+
+  publish:
+    name: Publish to Cloudflare Pages
+    needs: static-analysis
+    environment: production
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        uses: ./.github/actions/install-dependendencies
+
+      - name: Build
+        shell: bash
+        run: npm run build:production
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@1
+        with:
+          accountId: 79fd517feb1d579982e26ccedd0fc4b3
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          directory: ./dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: ericbaer-website
