@@ -14,7 +14,7 @@ import Projects from "../components/projects";
 import Publications from "../components/publications";
 import Talks from "../components/talks";
 
-export default function SignUp() {
+export default function Main() {
   return (
     <Container component="main" maxWidth="lg" sx={{ minHeight: "100vh" }}>
       <Box
