@@ -1,0 +1,86 @@
+.root {
+  height: 300px;
+  width: 700px;
+
+  margin-top: 15px;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  line-height: 1.5;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.inner .rose {
+  background: #191724;
+  color: #e0def4;
+  border-color: #000;
+}
+
+.inner .rose .caret {
+  background: #e0def4;
+}
+
+.header {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.body {
+  padding: 12px 14px;
+  flex: 1;
+
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y proximity;
+}
+
+.body > div:last-child {
+  scroll-snap-align: end;
+}
+
+.icon {
+  border-radius: 50%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+
+.closeIcon {
+  background: rgb(255, 95, 86);
+  margin-left: 12px;
+}
+
+.minimizeIcon {
+  background: rgb(255, 189, 46);
+}
+
+.zoomIcon {
+  background: rgb(39, 201, 63);
+}
+
+.icon + .icon {
+  margin-left: 8px;
+}
+
+.caret {
+  background: rgba(248, 28, 229, 0.8);
+  display: inline-block;
+  width: 7px;
+  height: 15px;
+  position: relative;
+  bottom: 1px;
+  vertical-align: middle;
+}
