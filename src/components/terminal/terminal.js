@@ -3,6 +3,10 @@ import { useEffect, useState, useRef } from "react";
 import emojis from "../../emojis";
 import styles from "./terminal.module.css";
 
+import { Fira_Code } from "@next/font/google";
+
+const firaCode = Fira_Code({ subsets: ["latin"] });
+
 const PROMPT_KEYWORD = "PROMPT: ";
 
 const Line = ({ children, prompt = false, withCaret = false }) => {
@@ -50,7 +54,10 @@ const Terminal = ({ terminalContent, onClickButton, terminalRef }) => {
           />
         </div>
 
-        <div className={styles.body} ref={terminalRef}>
+        <div
+          className={`${styles.body} ${firaCode.className}`}
+          ref={terminalRef}
+        >
           {terminalContentAsLines}
           <Line prompt={emojis[terminalContent.length]} withCaret={true} />
         </div>
