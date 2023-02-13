@@ -103,7 +103,7 @@ const staticContent = {
     [
       `${PROMPT_KEYWORD}getJoke`,
       `How do you know if Will Smith has been at a crime scene?`,
-      `look for the Fresh Prince`,
+      `Look for the Fresh Prince`,
     ],
     [
       `${PROMPT_KEYWORD}getJoke`,

@@ -12,7 +12,7 @@ const PROMPT_KEYWORD = "PROMPT: ";
 const Line = ({ children, prompt = false, withCaret = false }) => {
   return (
     <div>
-      {prompt && <span>{prompt} ~ </span>}
+      {prompt && <span className={styles.prompt}>{prompt} ~ </span>}
       {children}
       {withCaret && <span className={styles.caret} />}
     </div>
