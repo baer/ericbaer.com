@@ -1,0 +1,103 @@
+.circle {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.circle::before,
+.circle::after {
+  border-radius: inherit;
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.base {
+  /* Metal outer border */
+  background-image: linear-gradient(
+    45deg,
+    #fefefe 10%,
+    #5d6d94,
+    #050718,
+    #5d6d94,
+    #fefefe 90%
+  );
+
+  height: 260px;
+  width: 260px;
+  padding: 10px;
+  z-index: 10;
+}
+
+/* Metal inner border */
+.base::before {
+  background-image: linear-gradient(#d9dee5, #151531),
+    linear-gradient(90deg, #434c77, #0b0a1f, #434c77);
+  background-blend-mode: hard-light, normal;
+
+  width: 240px;
+  height: 240px;
+}
+
+/* Red glow */
+.base::after {
+  mix-blend-mode: lighten;
+
+  top: -8px;
+  left: -10px;
+  width: 280px;
+  height: 280px;
+}
+
+.lens {
+  /* Red lens */
+  background-image: radial-gradient(#b10000 12%, #120619 67%, #200517);
+
+  /* Lens dark inner borders */
+  border: 8px solid #050718;
+  box-shadow: inset 0 0 0 10px #380014;
+
+  top: 12px;
+  left: 12px;
+  width: 213px;
+  height: 213px;
+  z-index: 10;
+}
+
+/* Red cast over lens, intensifies color */
+.lens::before {
+  background-image: radial-gradient(#f00 20%, #470010 50%, #1a193e 80%);
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+
+  z-index: 100;
+}
+
+/* Brightens lens */
+.animation {
+  animation: flicker 0.5s;
+  background: radial-gradient(#79b4ba, #47696d, #890000);
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}

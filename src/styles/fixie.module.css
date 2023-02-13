@@ -1,0 +1,54 @@
+.AppLayout {
+  background: linear-gradient(45deg, #02001f, #1f1b4e);
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+.AppLayout > header {
+  /* background-color: #8ca0ff; */
+  grid-area: header;
+}
+
+.AppLayout > main {
+  grid-area: main;
+
+  /* This gives you sticky header/footer */
+  /* overflow: auto; */
+}
+
+.heading {
+  color: white;
+  font-size: 5rem;
+  font-weight: 500;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(90deg, #0094ce 63.6%, transparent 36.4%);
+  border: 1px solid #0094ce;
+  border-radius: 0;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  gap: 80px;
+
+  margin-top: 40px;
+}
+
+/* Utilities */
+.CenteredContainer {
+  display: flex;
+  /* cross axis (vertical) */
+  align-items: center;
+  /* main axis (horizontal) */
+  justify-content: center;
+}
