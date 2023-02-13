@@ -12,7 +12,16 @@ const PROMPT_KEYWORD = "PROMPT: ";
 const staticContent = {
   prs: [
     `${PROMPT_KEYWORD}getExamplePRs`,
-    "A PR describing accidental complexity and the resulting developer friction for static site routing in Vercel's Next.js. Though this PR was closed, it was the basis for a merged RFC.",
+    // eslint-disable-next-line react/jsx-key
+    <span>
+      A PR describing accidental complexity and the resulting developer friction
+      for static site routing in Vercel&apos;s Next.js which was used for a
+      now-merged rendering &nbsp;
+      <Link href="https://github.com/vercel/next.js/pull/6963#issuecomment-496254904">
+        RFC
+      </Link>
+      .
+    </span>,
     // eslint-disable-next-line react/jsx-key
     <Link href="https://github.com/vercel/next.js/pull/6963">
       https://github.com/vercel/next.js/pull/6963
