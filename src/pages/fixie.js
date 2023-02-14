@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import Typography from "@mui/material/Typography";
 
 import Link from "../components/link";
@@ -10,12 +10,13 @@ import styles from "../styles/fixie.module.css";
 const PROMPT_KEYWORD = "PROMPT: ";
 
 /* eslint-disable react/jsx-key */
-
 const staticContent = {
   prs: [
     [
       `${PROMPT_KEYWORD}getExamplePR`,
-      `A "Gotcha" in Next.js`,
+      <Typography sx={{ fontWeight: 900 }} variant="p">
+        A &quot;Gotcha&quot; in Next.js
+      </Typography>,
       `---`,
       `Vercel's Next.js compiles and ships every file in your pages directory as a routable page. Unfortunately, if you co-locate page-specific helper components like "SearchBar," the builds slow down and hosting platforms will serve dozens/hundreds of invalid but crawlable pages. There are ways around it, but it made projects more challenging for Jr. developers to navigate.`,
       ` `,
@@ -25,7 +26,7 @@ const staticContent = {
         <Link href="https://github.com/vercel/next.js/discussions/37136">
           Layouts RFC
         </Link>{" "}
-        which landed in Next.13 last week. There is even a
+        which landed in Next.13 last week. There is even a{" "}
         <Link href="https://nextjs.org/blog/next-13#layouts">
           specific callout
         </Link>{" "}
@@ -38,7 +39,9 @@ const staticContent = {
     ],
     [
       `${PROMPT_KEYWORD}getExamplePR`,
-      `Examples of high-quality PRs going waaaaaay back (2013 and 2015).`,
+      <Typography sx={{ fontWeight: 900 }} variant="p">
+        Examples of high-quality PRs going waaaaaay back (2013 and 2015)
+      </Typography>,
       ` `,
       <Link href="https://github.com/adamwdraper/Numeral-js/pull/99">
         https://github.com/adamwdraper/Numeral-js/pull/99
@@ -49,7 +52,9 @@ const staticContent = {
     ],
     [
       `${PROMPT_KEYWORD}getExamplePR`,
-      `Proposed fixes for accidental complexity in Next.js projects`,
+      <Typography sx={{ fontWeight: 900 }} variant="p">
+        Proposed fixes for accidental complexity in Next.js projects
+      </Typography>,
       `---`,
       <span>
         A PR describing accidental complexity and the resulting developer
@@ -67,7 +72,9 @@ const staticContent = {
     ],
     [
       `${PROMPT_KEYWORD}getExamplePRs`,
-      `A feature request in CDK`,
+      <Typography sx={{ fontWeight: 900 }} variant="p">
+        A feature request in CDK
+      </Typography>,
       `---`,
       `This PR describes a new use case and discusses several ways to accommodate it. It has received significant traction and is a P2 for the team at the time of writing.`,
       ` `,
@@ -77,7 +84,9 @@ const staticContent = {
     ],
     [
       `${PROMPT_KEYWORD}getExamplePRs`,
-      `Work improving the build system for GraphQL's reference implementation`,
+      <Typography sx={{ fontWeight: 900 }} variant="p">
+        Improving the build system for GraphQL&apos;s reference implementation
+      </Typography>,
       ` `,
       <Link href="https://github.com/graphql/graphql-js/pull/939">
         https://github.com/graphql/graphql-js/pull/939
@@ -91,7 +100,10 @@ const staticContent = {
     ],
     [
       `${PROMPT_KEYWORD}getExamplePRs`,
-      `Working through a deep bug with the maintainer of Vercel's Next.js framework`,
+      <Typography sx={{ fontWeight: 900 }} variant="p">
+        Working through a deep bug with the maintainer of Vercel&apos;s Next.js
+        framework
+      </Typography>,
       ` `,
       <Link href="https://github.com/vercel/next.js/pull/4341">
         https://github.com/vercel/next.js/pull/4341
@@ -143,25 +155,47 @@ const staticContent = {
   ],
 };
 
+const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
+
+const getExampleAndSetAlreadySeen = (content, alreadySeen, setAlreadySeen) => {
+  let randomIndex = getRandomIndex(content);
+  while (alreadySeen.has(randomIndex)) {
+    randomIndex = getRandomIndex(content);
+  }
+
+  if (alreadySeen.size + 1 === content.length) {
+    setAlreadySeen(new Set());
+  } else {
+    setAlreadySeen(new Set(alreadySeen.add(randomIndex)));
+  }
+
+  return content[randomIndex];
+};
+
 export default function Fixie() {
-  const terminalRef = useRef();
-
   const [shouldAnimateHal, setShouldAnimateHal] = useState(false);
-
   const [terminalContent, setTerminalContent] = useState([
     `PROMPT: Hello, Fixie`,
   ]);
+  const [alreadySeenJokes, setAlreadySeenJokes] = useState(new Set());
+  const [alreadySeenPRs, setAlreadySeenPRs] = useState(new Set());
 
   const appendExamplePR = () => {
-    const prs = staticContent.prs;
-    const randomPR = prs[Math.floor(Math.random() * prs.length)];
-    setTerminalContent([...terminalContent].concat(randomPR, ` `));
+    const newContent = getExampleAndSetAlreadySeen(
+      staticContent.prs,
+      alreadySeenPRs,
+      setAlreadySeenPRs
+    );
+    setTerminalContent([...terminalContent].concat(newContent, ` `));
   };
 
   const appendJoke = () => {
-    const jokes = staticContent.jokes;
-    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-    setTerminalContent([...terminalContent].concat(randomJoke, ` `));
+    const newContent = getExampleAndSetAlreadySeen(
+      staticContent.jokes,
+      alreadySeenJokes,
+      setAlreadySeenJokes
+    );
+    setTerminalContent([...terminalContent].concat(newContent, ` `));
   };
 
   const animateHAL = () => {
@@ -210,7 +244,6 @@ export default function Fixie() {
           <Terminal
             terminalContent={terminalContent}
             onClickButton={animateHAL}
-            terminalRef={terminalRef}
           />
         </div>
       </main>

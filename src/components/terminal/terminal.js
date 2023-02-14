@@ -30,7 +30,7 @@ const wrapContentInLines = (content, promptKeyword) =>
     );
   });
 
-const Terminal = ({ terminalContent, onClickButton, terminalRef }) => {
+const Terminal = ({ terminalContent, onClickButton }) => {
   const terminalContentAsLines = wrapContentInLines(
     terminalContent,
     PROMPT_KEYWORD
@@ -54,10 +54,7 @@ const Terminal = ({ terminalContent, onClickButton, terminalRef }) => {
           />
         </div>
 
-        <div
-          className={`${styles.body} ${firaCode.className}`}
-          ref={terminalRef}
-        >
+        <div className={`${styles.body} ${firaCode.className}`}>
           {terminalContentAsLines}
           <Line prompt={emojis[terminalContent.length]} withCaret={true} />
         </div>
