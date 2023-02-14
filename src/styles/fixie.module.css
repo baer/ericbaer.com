@@ -24,14 +24,14 @@
 
 .heading {
   color: white;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 500;
   padding-right: 4rem;
   padding-left: 4rem;
   margin-top: 10px;
   margin-bottom: 20px;
 
-  background: linear-gradient(90deg, #0094ce 62.5%, transparent 37.5%);
+  background: linear-gradient(90deg, #0094ce 63.6%, transparent 36.4%);
   border: 1px solid #0094ce;
   border-radius: 0;
 }
@@ -39,7 +39,7 @@
 .buttonContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
 
   margin-top: 40px;
 }
@@ -48,8 +48,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-
-  height: 50vh;
 }
 
 /* Utilities */
