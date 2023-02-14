@@ -38,10 +38,16 @@
 
 .buttonContainer {
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: 1fr 1fr;
   gap: 80px;
 
   margin-top: 40px;
+}
+
+.terminalContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 /* Utilities */

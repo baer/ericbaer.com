@@ -240,7 +240,7 @@ export default function Fixie() {
           </div>
         </div>
 
-        <div className={styles.CenteredContainer}>
+        <div className={styles.terminalContainer}>
           <Terminal
             terminalContent={terminalContent}
             onClickButton={animateHAL}

@@ -1,11 +1,17 @@
 .root {
-  height: 300px;
-  width: 700px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 200px;
 
   margin-top: 15px;
 }
 
 .inner {
+  flex-grow: 1;
+  flex-basis: 375px;
+  max-width: 1000px;
+
   position: relative;
   display: flex;
   flex-direction: column;
