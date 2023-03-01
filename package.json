@@ -24,7 +24,7 @@
     "@emotion/styled": "11.10.5",
     "@mui/icons-material": "5.11.0",
     "@mui/material": "5.11.8",
-    "eslint": "8.33.0",
+    "eslint": "8.35.0",
     "eslint-config-next": "13.1.6",
     "eslint-config-prettier": "8.6.0",
     "husky": "8.0.3",
