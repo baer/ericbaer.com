@@ -22,7 +22,7 @@
     "@emotion/react": "11.10.6",
     "@emotion/server": "11.10.0",
     "@emotion/styled": "11.10.6",
-    "@mui/icons-material": "5.11.0",
+    "@mui/icons-material": "5.11.16",
     "@mui/material": "5.11.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.1.6",
