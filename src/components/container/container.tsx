@@ -21,6 +21,8 @@ export default function Container({
         "flex-col",
         "gap-6",
         "p-6",
+        "ml-4",
+        "mr-5",
       ])}
     >
       {children}

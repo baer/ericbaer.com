@@ -8,6 +8,7 @@ import joinClasses from "@/util/join-classes";
 import StackOverflowIcon from "@/components/icons/stack-overflow";
 import LinkedInIcon from "@/components/icons/linkedin";
 import TwitterIcon from "@/components/icons/twitter";
+import Pencil from "@/components/icons/pencil";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,16 +35,19 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className={styles["app-layout"]}>
           <header>
-            <h1
-              className={joinClasses([
-                "text-center",
-                "text-7xl",
-                "m-10",
-                "font-light",
-              ])}
-            >
-              Eric Baer
-            </h1>
+            <Link href="/">
+              <h1
+                className={joinClasses([
+                  "text-center",
+                  "text-7xl",
+                  "mt-8",
+                  "mb-10",
+                  "font-light",
+                ])}
+              >
+                Eric Baer
+              </h1>
+            </Link>
 
             <div
               className={joinClasses([
@@ -71,6 +75,10 @@ export default function RootLayout({
                 href="https://stackoverflow.com/users/856873/baer"
               >
                 <StackOverflowIcon />
+              </Link>
+
+              <Link aria-label="Blog link" href="/blog">
+                <Pencil />
               </Link>
             </div>
           </header>

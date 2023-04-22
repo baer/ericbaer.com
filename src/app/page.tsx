@@ -8,9 +8,7 @@ import Container from "@/components/container/container";
 
 export default function Home() {
   return (
-    <section
-      className={joinClasses(["flex", "flex-col", "gap-14", "ml-4", "mr-4"])}
-    >
+    <section className={joinClasses(["flex", "flex-col", "gap-14"])}>
       <Container backgroundColor={"#b3e1bb"}>
         <h2
           className={joinClasses([
