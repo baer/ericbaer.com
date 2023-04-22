@@ -18,26 +18,24 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@emotion/cache": "11.10.5",
+    "@emotion/cache": "11.10.7",
     "@emotion/react": "11.10.6",
     "@emotion/server": "11.10.0",
     "@emotion/styled": "11.10.6",
     "@mui/icons-material": "5.11.16",
-    "@mui/material": "5.11.11",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.1.6",
+    "@mui/material": "5.12.1",
+    "@next/font": "13.3.1",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
     "eslint-config-prettier": "8.8.0",
     "husky": "8.0.3",
-    "lint-staged": "13.1.2",
-    "next": "13.3.0",
-    "nodemon": "2.0.20",
-    "prettier": "2.8.4",
+    "lint-staged": "13.2.1",
+    "next": "13.3.1",
+    "nodemon": "2.0.22",
+    "prettier": "2.8.7",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "serve": "14.2.0"
-  },
-  "dependencies": {
-    "@next/font": "13.1.6"
   }
 }
