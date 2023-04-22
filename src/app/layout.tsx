@@ -8,7 +8,6 @@ import joinClasses from "../util/join-classes";
 import StackOverflowIcon from "../components/icons/stack-overflow";
 import LinkedInIcon from "../components/icons/linkedin";
 import TwitterIcon from "../components/icons/twitter";
-import Pencil from "../components/icons/pencil";
 
 const inter = Inter({ subsets: ["latin"] });
 
