@@ -1,0 +1,22 @@
+/* https://www.joshwcomeau.com/css/full-bleed/ */
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(90ch, 100%)
+    1fr;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+.featured-work-section {
+  border: 2px solid black;
+  filter: drop-shadow(10px 10px 0px #4444dd);
+}

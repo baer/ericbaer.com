@@ -5,26 +5,24 @@
   "author": "Eric Baer",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build:production": "NODE_ENV=production next build && NODE_ENV=production next export -o dist",
-    "build:dev": "NODE_ENV=development next build --profile && NODE_ENV=development next export -o dist",
-    "serve-static": "nodemon --watch dist --exec 'serve dist -l 7000'",
     "analyze-code:lint-js": "next lint",
     "analyze-code:prettier": "prettier --list-different '**/*.{js,jsx,ts,tsx,json,css,md,yaml}'",
     "analyze-code": "npm run analyze-code:lint-js && npm run analyze-code:prettier",
+    "build:dev": "NODE_ENV=development next build",
+    "build:production": "NODE_ENV=production next build",
+    "dev": "next dev",
     "fix:lint-js": "next lint",
     "fix:prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md,yaml}'",
     "fix": "npm run fix:lint-js && npm run fix:prettier",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "serve-static": "nodemon --watch out --exec 'serve out -l 7000'",
+    "start": "next start"
   },
   "devDependencies": {
-    "@emotion/cache": "11.10.7",
-    "@emotion/react": "11.10.6",
-    "@emotion/server": "11.10.0",
-    "@emotion/styled": "11.10.6",
-    "@mui/icons-material": "5.11.16",
-    "@mui/material": "5.12.1",
-    "@next/font": "13.3.1",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
+    "autoprefixer": "10.4.14",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
     "eslint-config-prettier": "8.8.0",
@@ -32,10 +30,12 @@
     "lint-staged": "13.2.1",
     "next": "13.3.1",
     "nodemon": "2.0.22",
+    "postcss": "8.4.22",
     "prettier": "2.8.7",
-    "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "serve": "14.2.0"
+    "serve": "14.2.0",
+    "tailwindcss": "3.3.1",
+    "typescript": "5.0.4"
   }
 }

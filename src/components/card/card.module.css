@@ -1,0 +1,15 @@
+.card__image {
+  flex: 0 0 25%;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.card__link {
+  border-bottom: 2px dashed transparent;
+  transition: color 0.3s;
+}
+
+.card__link:hover {
+  color: var(--primary-color);
+  text-decoration: var(--highlight-color) wavy underline;
+}

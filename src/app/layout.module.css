@@ -1,0 +1,29 @@
+.app-layout {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+  gap: 1rem;
+}
+
+.app-layout > header {
+  grid-area: header;
+}
+
+.app-layout > main {
+  grid-area: main;
+}
+
+.app-layout > footer {
+  grid-area: footer;
+  text-align: center;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
