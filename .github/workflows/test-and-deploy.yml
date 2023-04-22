@@ -51,6 +51,6 @@ jobs:
         with:
           accountId: 79fd517feb1d579982e26ccedd0fc4b3
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          directory: ./dist
+          directory: ./out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           projectName: ericbaer-website
