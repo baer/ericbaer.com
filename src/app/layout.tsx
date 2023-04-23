@@ -33,7 +33,18 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <div className={styles["app-layout"]}>
-          <header className={styles["header-layout"]}>
+          <header>
+            <h1
+              className={joinClasses([
+                "text-center",
+                "text-7xl",
+                "m-10",
+                "font-light",
+              ])}
+            >
+              Eric Baer
+            </h1>
+
             <div
               className={joinClasses([
                 "flex",
@@ -62,19 +73,8 @@ export default function RootLayout({
                 <StackOverflowIcon />
               </Link>
             </div>
-
-            <h1
-              className={joinClasses([
-                "text-center",
-                "text-7xl",
-                "m-10",
-                "font-light",
-              ])}
-            >
-              Eric Baer
-            </h1>
           </header>
-          <main className={styles["main-layout"]}>{children}</main>
+          <main>{children}</main>
           <footer>
             {"Copyright © Eric Baer "}
             {new Date().getFullYear()}

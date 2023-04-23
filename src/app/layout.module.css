@@ -16,8 +16,19 @@
   grid-area: header;
 }
 
+/* https://www.joshwcomeau.com/css/full-bleed/ */
 .app-layout > main {
   grid-area: main;
+
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(90ch, 100%)
+    1fr;
+}
+
+.app-layout > main > * {
+  grid-column: 2;
 }
 
 .app-layout > footer {
@@ -26,17 +37,4 @@
 
   margin-top: 2rem;
   margin-bottom: 1rem;
-}
-
-/* https://www.joshwcomeau.com/css/full-bleed/ */
-.main-layout {
-  display: grid;
-  grid-template-columns:
-    1fr
-    min(90ch, 100%)
-    1fr;
-}
-
-.main-layout > * {
-  grid-column: 2;
 }
