@@ -1,8 +1,9 @@
 "use client";
 
 import styles from "./page.module.css";
-import joinClasses from "../util/join-classes";
-import Card from "../components/card/card";
+
+import joinClasses from "@/util/join-classes";
+import Card from "@/components/card/card";
 
 export default function Home() {
   return (

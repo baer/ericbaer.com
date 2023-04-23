@@ -4,10 +4,10 @@ import styles from "./layout.module.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 
-import joinClasses from "../util/join-classes";
-import StackOverflowIcon from "../components/icons/stack-overflow";
-import LinkedInIcon from "../components/icons/linkedin";
-import TwitterIcon from "../components/icons/twitter";
+import joinClasses from "@/util/join-classes";
+import StackOverflowIcon from "@/components/icons/stack-overflow";
+import LinkedInIcon from "@/components/icons/linkedin";
+import TwitterIcon from "@/components/icons/twitter";
 
 const inter = Inter({ subsets: ["latin"] });
 
