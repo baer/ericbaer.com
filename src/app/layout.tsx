@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <div className={styles["app-layout"]}>
-          <header>
+          <header className={styles["header-layout"]}>
             <div
               className={joinClasses([
                 "flex",
@@ -74,7 +74,7 @@ export default function RootLayout({
               Eric Baer
             </h1>
           </header>
-          <main>{children}</main>
+          <main className={styles["main-layout"]}>{children}</main>
           <footer>
             {"Copyright © Eric Baer "}
             {new Date().getFullYear()}
