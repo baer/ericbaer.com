@@ -4,22 +4,14 @@ import styles from "./page.module.css";
 
 import joinClasses from "@/util/join-classes";
 import Card from "@/components/card/card";
+import Container from "@/components/container/container";
 
 export default function Home() {
   return (
     <section
       className={joinClasses(["flex", "flex-col", "gap-14", "ml-4", "mr-4"])}
     >
-      <div
-        className={joinClasses([
-          styles["featured-work-section"],
-          "bg-[#b3e1bb]",
-          "flex",
-          "flex-col",
-          "gap-6",
-          "p-6",
-        ])}
-      >
+      <Container backgroundColor={"#b3e1bb"}>
         <h2
           className={joinClasses([
             styles["section-heading"],
@@ -55,18 +47,9 @@ export default function Home() {
           imgURI="/images/evolution-of-api-design.svg"
           imgAlt="Presentation thumbnail"
         />
-      </div>
+      </Container>
 
-      <div
-        className={joinClasses([
-          styles["featured-work-section"],
-          "bg-[#dfecfa]",
-          "flex",
-          "flex-col",
-          "gap-6",
-          "p-6",
-        ])}
-      >
+      <Container backgroundColor={"#dfecfa"}>
         <h2 className={joinClasses([styles["section-heading"], "text-2xl"])}>
           Featured Publications
         </h2>
@@ -98,18 +81,9 @@ export default function Home() {
           imgWidth="50px"
           imgHeight="50px"
         />
-      </div>
+      </Container>
 
-      <div
-        className={joinClasses([
-          styles["featured-work-section"],
-          "bg-[#d8f059]",
-          "flex",
-          "flex-col",
-          "gap-6",
-          "p-6",
-        ])}
-      >
+      <Container backgroundColor={"#d8f059"}>
         <h2 className={joinClasses([styles["section-heading"], "text-2xl"])}>
           Assorted Projects
         </h2>
@@ -121,24 +95,15 @@ export default function Home() {
           imgURI="/images/rockies-social-preview.png"
           imgAlt="isThereAFuckingRockiesGame.com Social Preview"
         />
-      </div>
+      </Container>
 
-      <div
-        className={joinClasses([
-          styles["featured-work-section"],
-          "bg-[#f8dffa]",
-          "flex",
-          "flex-col",
-          "gap-6",
-          "p-6",
-        ])}
-      >
+      <Container backgroundColor={"#f8dffa"}>
         <h2 className={joinClasses([styles["section-heading"], "text-2xl"])}>
           Go-to Karaoke Song
         </h2>
 
         <p className="">Apeman, the Kinks</p>
-      </div>
+      </Container>
     </section>
   );
 }

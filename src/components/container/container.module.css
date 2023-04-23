@@ -1,0 +1,4 @@
+.featured-work-section {
+  border: 2px solid black;
+  filter: drop-shadow(10px 10px 0px #4444dd);
+}
