@@ -49,7 +49,7 @@ export default function RootLayout({
               className={joinClasses([
                 "flex",
                 "justify-around",
-                "mt-10",
+                "mb-7",
                 "text-4xl",
                 "text-gray-500",
               ])}
