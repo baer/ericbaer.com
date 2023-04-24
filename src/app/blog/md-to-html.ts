@@ -4,6 +4,7 @@ import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
+import rehypePrismPlus from "rehype-prism-plus";
 
 export default async function markdownToHtml(
   markdown: string
@@ -13,6 +14,7 @@ export default async function markdownToHtml(
     .use(remarkBreaks)
     .use(remarkGfm)
     .use(remarkRehype)
+    .use(rehypePrismPlus)
     .use(rehypeStringify)
     .process(markdown);
 

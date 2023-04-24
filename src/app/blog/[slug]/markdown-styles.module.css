@@ -26,6 +26,10 @@
   @apply mt-6;
 }
 
+.markdown ol {
+  @apply list-decimal list-inside mt-4 mb-4;
+}
+
 .markdown strong {
   @apply font-semibold;
 }
@@ -76,6 +80,9 @@
 
 .markdown pre code {
   @apply block bg-transparent p-0 overflow-visible rounded-none;
+  max-width: 75ch;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .markdown ul {

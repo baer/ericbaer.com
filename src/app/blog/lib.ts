@@ -9,7 +9,7 @@ import markdownToHTML from "./md-to-html";
 const postsDirectory = join(process.cwd(), "content");
 
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory).filter((file) => file !== ".gitkeep");
+  return fs.readdirSync(postsDirectory);
 }
 
 export async function getPostBySlug(

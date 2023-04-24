@@ -1,6 +1,7 @@
+import "@/css/prism.css";
+
 import markdownStyles from "./markdown-styles.module.css";
 
-import Link from "next/link";
 import Image from "next/image";
 
 import Container from "@/components/container/container";
@@ -22,22 +23,12 @@ export default async function Post({
     "coverImage",
   ]);
 
-  const image = (
-    <Image
-      src={coverImage ?? ""}
-      alt={`Cover Image for ${title}`}
-      className="shadow-sm w-full"
-      width={1300}
-      height={630}
-    />
-  );
-
   return (
     <>
       <h1
         className={joinClasses([
           "mt-7",
-          "mb-12",
+          "mb-9",
           "font-bold",
           "text-5xl",
           "md:text-7xl",
@@ -59,16 +50,16 @@ export default async function Post({
 
       <div
         style={{ gridColumn: "1/4", width: "100%" }}
-        className="mb-8 md:mb-16 sm:mx-0"
+        className="mb-8 md:mb-9 sm:mx-0"
       >
         <div className="sm:mx-0">
-          {slug ? (
-            <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
-              {image}
-            </Link>
-          ) : (
-            image
-          )}
+          <Image
+            src={coverImage ?? ""}
+            alt={`Cover Image for ${title}`}
+            className="shadow-sm max-2xl mx-auto"
+            width={1300}
+            height={630}
+          />
         </div>
       </div>
 

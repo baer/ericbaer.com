@@ -9,11 +9,7 @@ export default async function Page() {
 
   return (
     <ul className={joinClasses(["flex", "flex-col", "gap-7"])}>
-      {!posts.length && (
-        <div className={joinClasses(["text-7xl", "mt-14", "text-center"])}>
-          No posts found.
-        </div>
-      )}
+      {!posts.length && "No posts found."}
       {posts.map((frontMatter) => {
         const { slug, date, title, excerpt } = frontMatter;
         return (
