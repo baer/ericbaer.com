@@ -12,9 +12,11 @@ export default function Container({
 }: ContainerProps) {
   return (
     <div
+      // TODO: Why do I need to do this? Interpolation didn't work
+      // `bg-[${backgroundColor}]`,
+      style={{ backgroundColor: backgroundColor }}
       className={joinClasses([
         styles["featured-work-section"],
-        `bg-[${backgroundColor}]`,
         "flex",
         "flex-col",
         "gap-6",
