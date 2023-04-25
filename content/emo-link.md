@@ -10,11 +10,13 @@ ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
 
-Here's an EmoLink pointing to this blog post.
+# Introducing [EmoLink](https://emol.ink/)
+
+This is an EmoLink pointing to this blog post.
 <br/>
 [https://emol.ink/😻👩🏿‍🤝‍👨🏾👃🏾🛴👩🏾‍🎨🏍️🤷🏻‍♀🧑🏻‍🎨🧹🚚✋🏽](https://emol.ink/😻👩🏿‍🤝‍👨🏾👃🏾🛴👩🏾‍🎨🏍️🤷🏻‍♀🧑🏻‍🎨🧹🚚✋🏽)
 <br/>
-You probably have some questions like:
+There are emojis in it, and you probably have some questions like:
 
 - You can put emoji in a URL?
 - I like this.
