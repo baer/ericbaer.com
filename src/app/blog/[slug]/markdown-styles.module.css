@@ -35,7 +35,7 @@
 }
 
 .markdown a {
-  @apply text-blue-600 font-semibold;
+  @apply text-blue-900 font-medium underline decoration-wavy decoration-fuchsia-500;
 }
 
 .markdown strong a {

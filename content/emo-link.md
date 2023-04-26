@@ -36,9 +36,9 @@ Thanks! I worked pretty hard on it. It's always nice to hear nice things.
 
 ## Why aren't IRIs everywhere?
 
-The short answer is that backward compatibility is a bitch.
+The short answer is that backward compatibility is a bitch, and nobody wants to [break the Internet](https://developer.chrome.com/blog/smooshgate/).
 
-The longer answer is that nobody wants to [break the Internet](https://developer.chrome.com/blog/smooshgate/). A simple HTTP request passes through a LOT of [software and hardware](https://aws.amazon.com/blogs/mobile/what-happens-when-you-type-a-url-into-your-browser/), and there is no assurance that any of it will support IRIs. To maintain backward compatibility with existing URI infrastructure, IRIs are usually mapped to URIs using percent-encoded ASCII values before being sent. Basically, just a call to `encodeURIComponent`.
+The longer answer is that a simple HTTP request passes through a LOT of [software and hardware](https://aws.amazon.com/blogs/mobile/what-happens-when-you-type-a-url-into-your-browser/), and there is no assurance that any of it will support IRIs. To maintain backward compatibility with existing URI infrastructure, IRIs are usually mapped to URIs using percent-encoded ASCII values before being sent. Basically, just a call to `encodeURIComponent`.
 
 This may seem like a non-starter, but there is a trick! Modern browsers support IRIs by _displaying_ them in their native character sets but _converting them_ to URI before sending the request. So, while the actual URI over the wire may be long and ugly, all people see is the IRI.
 
@@ -53,6 +53,27 @@ it will be converted into this nasty thing before it goes over the wire.
 ```
 https://emol.ink%F0%9F%98%BB%F0%9F%91%A9%F0%9F%8F%BF%E2%80%8D%F0%9F%A4%9D%E2%80%8D%F0%9F%91%A8%F0%9F%8F%BE%F0%9F%91%83%F0%9F%8F%BE%F0%9F%9B%B4%F0%9F%91%A9%F0%9F%8F%BE%E2%80%8D%F0%9F%8E%A8%F0%9F%8F%8D%EF%B8%8F%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%F0%9F%A7%91%F0%9F%8F%BB%E2%80%8D%F0%9F%8E%A8%F0%9F%A7%B9%F0%9F%9A%9A%E2%9C%8B%F0%9F%8F%BD
 ```
+
+### Okay, so why doesn't everybody use them?
+
+Because browsers aren't the only things that handle links. Here are all the places IRIs do, and don't work that I've tested so far:
+
+**Works**
+
+- Chrome (MacOS) Address Bar
+- Arc (MacOS) Address Bar
+- Safari (MacOS) Address Bar
+- Firefox (MacOS) Address Bar
+- Gmail, but only when using an RTF link
+- Signal - Android
+- WhatsApp - Android
+- Android Messages
+- Android copy-paste
+
+**Doesn't Work**
+
+- Google Meet Chat
+- Twitter
 
 ## Did you say this works offline?
 
@@ -113,9 +134,9 @@ function encodeUUIDAsEmoji(uuid) {
 
 Well, one answer might be [because it's there](https://en.wikipedia.org/wiki/George_Mallory#:~:text=Mallory%20is%20famously%20quoted%20as,famous%20three%20words%20in%20mountaineering%22.). A better answer is that this is actually pretty novel and actually has a few real advantages:
 
-1. **It's backendless** - You run this on devices at the Edge, which may have limited, or intermittent connectivity.
-2. **It's simple and dependency-free** - The only servers that don't break in production are servers that don't exist.
-3. **Implementing it doesn't constrain your architecture** - ID generation requires specific types of DBs, and distributed hashing requires load balancing, health checking, and a coordination service.
-4. **It doesn't require Auth** - The standard approach to the problem uses an address space that is 7^62. This is very large, but because it's finite, you'll need to protect against bad actors filling up the space. This is typically done with an authentication layer, but it's not an issue when the address space is practically infinite.
-5. **You're cool, right?** - IRIs are modern, so if you use SvelteKit, wear a [teenie weenie beanie](https://youtu.be/9r5XVdKKcas), and don't think of the beach when you see a cartoon crab; you should probably be using IRIs.
-6. **Emoji is better** - Have fun!
+- **It's backendless** - You run this on devices at the Edge, which may have limited, or intermittent connectivity.
+- **It's simple and dependency-free** - The only servers that don't break in production are servers that don't exist.
+- **Implementing it doesn't constrain your architecture** - ID generation requires specific types of DBs, and distributed hashing requires load balancing, health checking, and a coordination service.
+- **It doesn't require Auth** - The standard approach to the problem uses an address space that is 7^62. This is very large, but because it's finite, you'll need to protect against bad actors filling up the space. This is typically done with an authentication layer, but it's not an issue when the address space is practically infinite.
+- **You're cool, right?** - IRIs are modern, so if you use SvelteKit, wear a [teenie weenie beanie](https://youtu.be/9r5XVdKKcas), and don't think of the beach when you see a cartoon crab; you should probably be using IRIs.
+- **Emoji is better** - Have fun!
