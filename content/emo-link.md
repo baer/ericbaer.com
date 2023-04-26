@@ -1,6 +1,6 @@
 ---
-title: "EmoLink - A backendless emoji URL shortener for the Edge"
-excerpt: "How I used new(ish) Internationalization standards to make an offline-capable, collision-free URL shortener."
+title: "EmoLink - An emoji URL shortener"
+excerpt: "How I used new(ish) Internationalization standards to make a backendless, offline-capable, collision-free URL shortener."
 coverImage: "/assets/blog/emo-link/cover.png"
 date: "2023-04-24T21:48:04.629Z"
 author:
@@ -48,7 +48,7 @@ https://emol.ink%F0%9F%98%BB%F0%9F%91%A9%F0%9F%8F%BF%E2%80%8D%F0%9F%A4%9D%E2%80%
 
 ## What does support look like?
 
-All of the major browsers seem to work just fine, but support on iOS, and in applications is kinda spotty. Here are all the places IRIs do, and don't work that I've tested so far:
+All of the major browsers seem to work just fine, but support on iOS and in applications is kinda spotty. Here are all the places IRIs do and don't work that I've tested so far:
 
 | Works | Application      | Platform | Notes               |
 | ----- | ---------------- | -------- | ------------------- |
@@ -109,12 +109,12 @@ function encodeUUIDAsEmoji(uuid) {
     .map(hexToBinary)
     .join("");
 
-  // The alphabet size determines the number of bits required to encode the
-  // complete set. The Unicode 15 Emoji set includes 4764 emojis. This
-  // requires either 12 bits to encode a slightly truncated set (2^12 =
-  // 4096), of 13 bits for the complete set. I've chosen to use 12 since
-  // padding several thousand chars would considerably complicate the
-  // problem for no real benefit
+  // The alphabet size determines the number of bits required to encode
+  // the complete set. The Unicode 15 Emoji set includes 4764 emojis.
+  // This requires either 12 bits to encode a slightly truncated set
+  // (2^12 = 4096), of 13 bits for the complete set. I've chosen to use
+  // 12 since padding several thousand chars would considerably complicate
+  // the problem for no real benefit.
   const bitsPerEmoji = 12;
 
   // Convert the binary string to an emoji string using the emoji alphabet
