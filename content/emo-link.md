@@ -48,7 +48,7 @@ https://emol.ink%F0%9F%98%BB%F0%9F%91%A9%F0%9F%8F%BF%E2%80%8D%F0%9F%A4%9D%E2%80%
 
 ## What does support look like?
 
-Not really. All of the major browsers seem to work just fine, but support in applications is kinda spotty. Here are all the places IRIs do, and don't work that I've tested so far:
+All of the major browsers seem to work just fine, but support on iOS, and in applications is kinda spotty. Here are all the places IRIs do, and don't work that I've tested so far:
 
 **Works**
 
