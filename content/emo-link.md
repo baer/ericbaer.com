@@ -50,25 +50,25 @@ https://emol.ink%F0%9F%98%BB%F0%9F%91%A9%F0%9F%8F%BF%E2%80%8D%F0%9F%A4%9D%E2%80%
 
 All of the major browsers seem to work just fine, but support on iOS, and in applications is kinda spotty. Here are all the places IRIs do, and don't work that I've tested so far:
 
-**Works**
-
-- Chrome (MacOS) Address Bar
-- Arc (MacOS) Address Bar
-- Safari (MacOS) Address Bar
-- Firefox (MacOS) Address Bar
-- Gmail, but only when using an RTF link
-- Signal - Android
-- WhatsApp - Android
-- Android Messages
-- Android copy-paste
-- Lunchclub Chat
-- LinkedIn Chat
-
-**Doesn't Work**
-
-- Google Meet Chat
-- Twitter
-- Discord
+| Works | Application      | Platform | Notes               |
+| ----- | ---------------- | -------- | ------------------- |
+| ✅    | Chrome           | macOS    |                     |
+| ✅    | Arc              | macOS    |                     |
+| ✅    | Safari           | macOS    |                     |
+| ✅    | Firefox          | macOS    |                     |
+| ✅    | GMail            | Web      | Only as an RTF link |
+| ✅    | Signal           | Android  |                     |
+| ✅    | Signal           | macOS    |                     |
+| ✅    | WhatsApp         | Android  |                     |
+| ✅    | Messages         | Android  |                     |
+| ✅    | copy-paste       | Android  |                     |
+| ✅    | Lunchclub Chat   | Web      |                     |
+| ✅    | LinkedIn Chat    | Web      |                     |
+| ✅    | LinkedIn Chat    | Android  |                     |
+| 🙅    | LinkedIn Chat    | Android  |                     |
+| 🙅    | Google Meet Chat | Web      |                     |
+| 🙅    | Twitter          | Web      |                     |
+| 🙅    | Discord          | Web      |                     |
 
 ## Did you say this works offline?
 
