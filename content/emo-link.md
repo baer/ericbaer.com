@@ -1,5 +1,5 @@
 ---
-title: "EmoLink - A backendless emoji-based URL shortener for the Edge"
+title: "EmoLink - A backendless emoji URL shortener for the Edge"
 excerpt: "How I used new(ish) Internationalization standards to make an offline-capable, collision-free URL shortener."
 coverImage: "/assets/blog/emo-link/cover.png"
 date: "2023-04-24T21:48:04.629Z"
@@ -69,11 +69,14 @@ Because browsers aren't the only things that handle links. Here are all the plac
 - WhatsApp - Android
 - Android Messages
 - Android copy-paste
+- Lunchclub Chat
+- LinkedIn Chat
 
 **Doesn't Work**
 
 - Google Meet Chat
 - Twitter
+- Discord
 
 ## Did you say this works offline?
 
