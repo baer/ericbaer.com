@@ -16,17 +16,9 @@ This is an EmoLink pointing to this blog post.
 <br/>
 [https://emol.ink/😻👩🏿‍🤝‍👨🏾👃🏾🛴👩🏾‍🎨🏍️🤷🏻‍♀🧑🏻‍🎨🧹🚚✋🏽](https://emol.ink/😻👩🏿‍🤝‍👨🏾👃🏾🛴👩🏾‍🎨🏍️🤷🏻‍♀🧑🏻‍🎨🧹🚚✋🏽)
 <br/>
-There are emojis in it, and you probably have some questions like:
+There are emojis in it, and you probably have some questions, so let's take it from the top.
 
-- You can put emoji in a URL?
-- I like this.
-- Why aren't Unicode URLs everywhere?
-- Did you say this works offline?
-- Why?
-
-Right. Some of those are questions. Let's take it from the top.
-
-## Putting Emoji In An ~URL~ IRI
+## You can put emoji in an ~URL~ IRI?
 
 In 2005, the IETF decided that some fraction of the Internet may be interested in non-US-ASCII characters in their URIs. To do this, they created [Internationalized Resource Identifier (IRI)](https://www.ietf.org/rfc/rfc3987.txt), a protocol that extends the functionality of the Uniform Resource Identifier (URI) to include Unicode characters, including emoji!
 
@@ -34,7 +26,7 @@ In 2005, the IETF decided that some fraction of the Internet may be interested i
 
 Thanks! I worked pretty hard on it. It's always nice to hear nice things.
 
-## Why aren't IRIs everywhere?
+## Why aren't we switching to IRIs?
 
 The short answer is that backward compatibility is a bitch, and nobody wants to [break the Internet](https://developer.chrome.com/blog/smooshgate/).
 
@@ -54,9 +46,9 @@ it will be converted into this nasty thing before it goes over the wire.
 https://emol.ink%F0%9F%98%BB%F0%9F%91%A9%F0%9F%8F%BF%E2%80%8D%F0%9F%A4%9D%E2%80%8D%F0%9F%91%A8%F0%9F%8F%BE%F0%9F%91%83%F0%9F%8F%BE%F0%9F%9B%B4%F0%9F%91%A9%F0%9F%8F%BE%E2%80%8D%F0%9F%8E%A8%F0%9F%8F%8D%EF%B8%8F%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%F0%9F%A7%91%F0%9F%8F%BB%E2%80%8D%F0%9F%8E%A8%F0%9F%A7%B9%F0%9F%9A%9A%E2%9C%8B%F0%9F%8F%BD
 ```
 
-### Okay, so why doesn't everybody use them?
+## What does support look like?
 
-Because browsers aren't the only things that handle links. Here are all the places IRIs do, and don't work that I've tested so far:
+Not really. All of the major browsers seem to work just fine, but support in applications is kinda spotty. Here are all the places IRIs do, and don't work that I've tested so far:
 
 **Works**
 
@@ -133,7 +125,7 @@ function encodeUUIDAsEmoji(uuid) {
 }
 ```
 
-## Why?
+## Why Would I Do This?
 
 Well, one answer might be [because it's there](https://en.wikipedia.org/wiki/George_Mallory#:~:text=Mallory%20is%20famously%20quoted%20as,famous%20three%20words%20in%20mountaineering%22.). A better answer is that this is actually pretty novel and actually has a few real advantages:
 
