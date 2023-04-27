@@ -113,33 +113,52 @@ Well, one answer might be [because it's there](https://en.wikipedia.org/wiki/Geo
 
 All of the major browsers seem to work just fine, but support on iOS and in applications is kinda spotty. Here are all the places IRIs do and don't work that I've tested so far:
 
-| Works | Application      | Platform | Notes               |
-| ----- | ---------------- | -------- | ------------------- |
-| ✅    | Chrome           | macOS    |                     |
-| ✅    | Arc              | macOS    |                     |
-| ✅    | Safari           | macOS    |                     |
-| ✅    | Firefox          | macOS    |                     |
-| ✅    | GMail            | Web      | Only as an RTF link |
-| ✅    | Signal           | Android  |                     |
-| 🙅    | Signal           | iOS      |                     |
-| ✅    | Signal           | macOS    |                     |
-| ✅    | WhatsApp         | Android  |                     |
-| 🙅    | WhatsApp         | iOS      |                     |
-| ✅    | Android Messages | Android  |                     |
-| ✅    | Android Messages | Web      |                     |
-| 🙅    | iMessage         | iOS      |                     |
-| ?     | iMessage         | macOS    |                     |
-| ✅    | copy-paste       | Android  |                     |
-| 🙅    | copy-paste       | iOS      |                     |
-| ✅    | Lunchclub Chat   | Web      |                     |
-| ✅    | LinkedIn Chat    | Android  |                     |
-| ?     | LinkedIn Chat    | iOS      |                     |
-| ✅    | LinkedIn Chat    | Web      |                     |
-| ?     | Microsoft Teams  | Android  |                     |
-| ?     | Microsoft Teams  | iOS      |                     |
-| ?     | Microsoft Teams  | macOS    |                     |
-| ?     | Microsoft Teams  | Windows  |                     |
-| ?     | Microsoft Teams  | Web      |                     |
-| 🙅    | Google Meet Chat | Web      |                     |
-| 🙅    | Twitter          | Web      |                     |
-| 🙅    | Discord          | Web      |                     |
+| Works | Application      | Platform | Notes            |
+| ----- | ---------------- | -------- | ---------------- |
+| ✅    | Chrome           | macOS    |                  |
+| ✅    | Arc              | macOS    |                  |
+| ✅    | Safari           | macOS    |                  |
+| ✅    | Firefox          | macOS    |                  |
+| ✅    | copy-paste       | Android  |                  |
+| 🙅    | copy-paste       | iOS      |                  |
+| ✅    | copy-paste       | MacOS    |                  |
+| ✅    | Gmail            | Android  | Only if RTF link |
+| ✅    | Gmail            | Web      | Only if RTF link |
+| ✅    | Signal           | Android  |                  |
+| 🙅    | Signal           | iOS      |                  |
+| ✅    | Signal           | macOS    |                  |
+| ✅    | WhatsApp         | Android  |                  |
+| 🙅    | WhatsApp         | iOS      |                  |
+| ✅    | Android Messages | Android  |                  |
+| ✅    | Android Messages | Web      |                  |
+| 🙅    | iMessage         | iOS      |                  |
+| ?     | iMessage         | macOS    |                  |
+| ✅    | Slack            | Android  |                  |
+| ?     | Slack            | iOS      |                  |
+| ✅    | Slack            | macOS    |                  |
+| ?     | Slack            | Windows  |                  |
+| ?     | Slack            | Web      |                  |
+| ✅    | Microsoft Teams  | Android  |                  |
+| ?     | Microsoft Teams  | iOS      |                  |
+| ✅    | Microsoft Teams  | macOS    |                  |
+| ?     | Microsoft Teams  | Windows  |                  |
+| ?     | Microsoft Teams  | Web      |                  |
+| ✅    | Discord          | Android  |                  |
+| ?     | Discord          | iOS      |                  |
+| ✅    | Discord          | macOS    |                  |
+| ?     | Discord          | Windows  |                  |
+| 🙅    | Discord          | Web      |                  |
+| ✅    | Lunchclub Chat   | Web      |                  |
+| ✅    | LinkedIn Chat    | Android  |                  |
+| ?     | LinkedIn Chat    | iOS      |                  |
+| ✅    | LinkedIn Chat    | Web      |                  |
+| 🙅    | Google Meet Chat | Android  |                  |
+| 🙅    | Google Meet Chat | Web      |                  |
+| 🙅    | Twitter (DM)     | Android  |                  |
+| 🙅    | Twitter (Tweet)  | Android  |                  |
+| 🙅    | Twitter (DM)     | Web      |                  |
+| 🙅    | Twitter (Tweet)  | Web      |                  |
+| ✅    | FB Messenger     | Android  |                  |
+| ?     | FB Messenger     | iOS      |                  |
+| 🙅    | Instagram DM     | Android  |                  |
+| ?     | Instagram DM     | iOS      |                  |
