@@ -1,5 +1,6 @@
 import styles from "./card.module.css";
 import joinClasses from "../../util/join-classes";
+import Link from "next/link";
 
 interface CardProps {
   title: string;
@@ -28,24 +29,26 @@ export default function Card(props: CardProps) {
       <div
         className={joinClasses([styles.card__image, "align-center", "mr-1"])}
       >
-        <img
-          className="mx-auto h-auto w-full"
-          style={{
-            ...(props.imgWidth ? { width: props.imgWidth } : {}),
-            ...(props.imgHeight ? { height: props.imgHeight } : {}),
-          }}
-          src={props.imgURI}
-          alt={props.imgAlt}
-        />
+        <Link href={props.url}>
+          <img
+            className="mx-auto h-auto w-full"
+            style={{
+              ...(props.imgWidth ? { width: props.imgWidth } : {}),
+              ...(props.imgHeight ? { height: props.imgHeight } : {}),
+            }}
+            src={props.imgURI}
+            alt={props.imgAlt}
+          />
+        </Link>
       </div>
 
       <div className={joinClasses(["flex-1"])}>
-        <a
+        <Link
           href={props.url}
           className={joinClasses([styles["card__link"], "text-lg"])}
         >
           {props.title}
-        </a>
+        </Link>
         <p className="mt-3">{props.description}</p>
       </div>
     </div>

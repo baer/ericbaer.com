@@ -87,6 +87,14 @@ export default function Home() {
         </h2>
 
         <Card
+          title="EmoLink"
+          description="EmoLink - A backendless, offline-capable, collision-free, emoji-based URL shortener for the Edge"
+          url="https://emol.ink/"
+          imgURI="/images/emo-link-preview.png"
+          imgAlt="emol.ink Social Preview"
+        />
+
+        <Card
           title="isThereAFuckingRockiesGame.com"
           description="WHAT?! Why is traffic so... Oh. Right."
           url="https://isthereafuckingrockiesgame.com/"
@@ -100,7 +108,7 @@ export default function Home() {
           Go-to Karaoke Song
         </h2>
 
-        <p className="">Apeman, the Kinks</p>
+        <p className="text-slate-700">Apeman, the Kinks</p>
       </Container>
     </section>
   );
