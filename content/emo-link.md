@@ -46,30 +46,6 @@ it will be converted into this nasty thing before it goes over the wire.
 https://emol.ink/%F0%9F%98%BB%F0%9F%91%A9%F0%9F%8F%BF%E2%80%8D%F0%9F%A4%9D%E2%80%8D%F0%9F%91%A8%F0%9F%8F%BE%F0%9F%91%83%F0%9F%8F%BE%F0%9F%9B%B4%F0%9F%91%A9%F0%9F%8F%BE%E2%80%8D%F0%9F%8E%A8%F0%9F%8F%8D%EF%B8%8F%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%F0%9F%A7%91%F0%9F%8F%BB%E2%80%8D%F0%9F%8E%A8%F0%9F%A7%B9%F0%9F%9A%9A%E2%9C%8B%F0%9F%8F%BD
 ```
 
-## What does support look like?
-
-All of the major browsers seem to work just fine, but support on iOS and in applications is kinda spotty. Here are all the places IRIs do and don't work that I've tested so far:
-
-| Works | Application      | Platform | Notes               |
-| ----- | ---------------- | -------- | ------------------- |
-| ✅    | Chrome           | macOS    |                     |
-| ✅    | Arc              | macOS    |                     |
-| ✅    | Safari           | macOS    |                     |
-| ✅    | Firefox          | macOS    |                     |
-| ✅    | GMail            | Web      | Only as an RTF link |
-| ✅    | Signal           | Android  |                     |
-| ✅    | Signal           | macOS    |                     |
-| ✅    | WhatsApp         | Android  |                     |
-| ✅    | Messages         | Android  |                     |
-| ✅    | copy-paste       | Android  |                     |
-| ✅    | Lunchclub Chat   | Web      |                     |
-| ✅    | LinkedIn Chat    | Web      |                     |
-| ✅    | LinkedIn Chat    | Android  |                     |
-| 🙅    | LinkedIn Chat    | Android  |                     |
-| 🙅    | Google Meet Chat | Web      |                     |
-| 🙅    | Twitter          | Web      |                     |
-| 🙅    | Discord          | Web      |                     |
-
 ## Did you say this works offline?
 
 I did!
@@ -135,3 +111,38 @@ Well, one answer might be [because it's there](https://en.wikipedia.org/wiki/Geo
 - **It doesn't require Auth** - The standard approach to the problem uses an address space that is 7^62. This is very large, but because it's finite, you'll need to protect against bad actors filling up the space. This is typically done with an authentication layer, but it's not an issue when the address space is practically infinite.
 - **You're cool, right?** - IRIs are modern, so if you use SvelteKit, wear a [teenie weenie beanie](https://youtu.be/9r5XVdKKcas), and don't think of the beach when you see a cartoon crab; you should probably be using IRIs.
 - **Emoji is better** - Have fun!
+
+## What does support look like?
+
+All of the major browsers seem to work just fine, but support on iOS and in applications is kinda spotty. Here are all the places IRIs do and don't work that I've tested so far:
+
+| Works | Application      | Platform | Notes               |
+| ----- | ---------------- | -------- | ------------------- |
+| ✅    | Chrome           | macOS    |                     |
+| ✅    | Arc              | macOS    |                     |
+| ✅    | Safari           | macOS    |                     |
+| ✅    | Firefox          | macOS    |                     |
+| ✅    | GMail            | Web      | Only as an RTF link |
+| ✅    | Signal           | Android  |                     |
+| 🙅    | Signal           | iOS      |                     |
+| ✅    | Signal           | macOS    |                     |
+| ✅    | WhatsApp         | Android  |                     |
+| 🙅    | WhatsApp         | iOS      |                     |
+| ✅    | Android Messages | Android  |                     |
+| ✅    | Android Messages | Web      |                     |
+| 🙅    | iMessage         | iOS      |                     |
+| ?     | iMessage         | macOS    |                     |
+| ✅    | copy-paste       | Android  |                     |
+| 🙅    | copy-paste       | iOS      |                     |
+| ✅    | Lunchclub Chat   | Web      |                     |
+| ✅    | LinkedIn Chat    | Android  |                     |
+| ?     | LinkedIn Chat    | iOS      |                     |
+| ✅    | LinkedIn Chat    | Web      |                     |
+| ?     | Microsoft Teams  | Android  |                     |
+| ?     | Microsoft Teams  | iOS      |                     |
+| ?     | Microsoft Teams  | macOS    |                     |
+| ?     | Microsoft Teams  | Windows  |                     |
+| ?     | Microsoft Teams  | Web      |                     |
+| 🙅    | Google Meet Chat | Web      |                     |
+| 🙅    | Twitter          | Web      |                     |
+| 🙅    | Discord          | Web      |                     |
