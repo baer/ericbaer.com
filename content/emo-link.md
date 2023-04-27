@@ -111,66 +111,70 @@ Well, one answer might be [because it's there](https://en.wikipedia.org/wiki/Geo
 
 ## What does support look like?
 
-All of the major browsers seem to work just fine, but support on iOS and in applications is kinda spotty. Here are all the places IRIs do and don't work that I've tested so far:
+All of the major browsers seem to work just fine, but support in applications is kinda spotty. Here are all the places IRIs do and don't work that I've tested so far:
 
-| Works | Application       | Platform | Notes            |
-| ----- | ----------------- | -------- | ---------------- |
-| ✅    | Chrome            | macOS    |                  |
-| ✅    | Arc               | macOS    |                  |
-| 🙅    | Arc (Command Bar) | macOS    |                  |
-| ✅    | Safari            | macOS    |                  |
-| ✅    | Firefox           | macOS    |                  |
-| ✅    | DuckDuckGo        | iOS      |                  |
-| ✅    | copy-paste        | Android  |                  |
-| ✅    | copy-paste        | iOS      |                  |
-| ✅    | copy-paste        | macOS    |                  |
-| ✅    | Gmail             | Android  | Only if RTF link |
-| ✅    | Gmail             | Web      | Only if RTF link |
-| ✅    | Signal            | Android  |                  |
-| ✅    | Signal            | iOS      |                  |
-| 🙅    | Signal            | macOS    |                  |
-| ✅    | WhatsApp          | Android  |                  |
-| ✅    | WhatsApp          | iOS      |                  |
-| ✅    | Android Messages  | Android  |                  |
-| ✅    | Android Messages  | Web      |                  |
-| ?     | iMessage          | iOS      |                  |
-| ✅    | iMessage (SMS)    | iOS      |                  |
-| ?     | iMessage          | macOS    |                  |
-| ✅    | Slack             | Android  |                  |
-| ?     | Slack             | iOS      |                  |
-| ✅    | Slack             | macOS    |                  |
-| ?     | Slack             | Windows  |                  |
-| ?     | Slack             | Web      |                  |
-| ✅    | Microsoft Teams   | Android  |                  |
-| ?     | Microsoft Teams   | iOS      |                  |
-| ✅    | Microsoft Teams   | macOS    |                  |
-| ?     | Microsoft Teams   | Windows  |                  |
-| ?     | Microsoft Teams   | Web      |                  |
-| ✅    | Discord           | Android  |                  |
-| ?     | Discord           | iOS      |                  |
-| ✅    | Discord           | macOS    |                  |
-| ?     | Discord           | Windows  |                  |
-| 🙅    | Discord           | Web      |                  |
-| ?     | Telegram          | Android  |                  |
-| ?     | Telegram          | iOS      |                  |
-| ?     | Telegram          | Web      |                  |
-| ✅    | FB Messenger      | Android  |                  |
-| ✅    | FB Messenger      | iOS      |                  |
-| 🙅    | Instagram DM      | Android  |                  |
-| ✅    | Instagram DM      | iOS      |                  |
-| ✅    | LinkedIn Chat     | Android  |                  |
-| ?     | LinkedIn Chat     | iOS      |                  |
-| ✅    | LinkedIn Chat     | Web      |                  |
-| 🙅    | Google Meet Chat  | Android  |                  |
-| ?     | Google Meet Chat  | iOS      |                  |
-| 🙅    | Google Meet Chat  | Web      |                  |
-| ?     | Zoom Chat         | Android  |                  |
-| ?     | Zoom Chat         | iOS      |                  |
-| ?     | Zoom Chat         | macOS    |                  |
-| ?     | Zoom Chat         | Windows  |                  |
-| ?     | Zoom Chat         | Web      |                  |
-| 🙅    | Twitter (DM)      | Android  |                  |
-| 🙅    | Twitter (Tweet)   | Android  |                  |
-| 🙅    | Twitter (DM)      | Web      |                  |
-| 🙅    | Twitter (Tweet)   | Web      |                  |
-| ✅    | Lunchclub Chat    | Web      |                  |
+| Works | Application       | Platform | Notes               |
+| ----- | ----------------- | -------- | ------------------- |
+| ✅    | Chrome            | macOS    |                     |
+| ✅    | Arc               | macOS    |                     |
+| 🙅    | Arc (Command Bar) | macOS    |                     |
+| ✅    | Safari            | macOS    |                     |
+| ✅    | Firefox           | macOS    |                     |
+| ✅    | DuckDuckGo        | iOS      |                     |
+| ✅    | copy-paste        | Android  |                     |
+| ✅    | copy-paste        | iOS      |                     |
+| ✅    | copy-paste        | macOS    |                     |
+| ✅    | Gmail             | Android  | If manually created |
+| ?     | Gmail             | iOS      |                     |
+| ✅    | Gmail             | Web      | If manually created |
+| ?     | Outlook           | Android  |                     |
+| ?     | Outlook           | iOS      |                     |
+| ?     | Outlook           | Web      |                     |
+| ✅    | Signal            | Android  |                     |
+| ✅    | Signal            | iOS      |                     |
+| 🙅    | Signal            | macOS    |                     |
+| ✅    | WhatsApp          | Android  |                     |
+| ✅    | WhatsApp          | iOS      |                     |
+| ✅    | Android Messages  | Android  |                     |
+| ✅    | Android Messages  | Web      |                     |
+| ?     | iMessage          | iOS      |                     |
+| ✅    | iMessage (SMS)    | iOS      |                     |
+| ?     | iMessage          | macOS    |                     |
+| ✅    | Slack             | Android  |                     |
+| ✅    | Slack             | iOS      |                     |
+| ✅    | Slack             | macOS    |                     |
+| ?     | Slack             | Windows  |                     |
+| ?     | Slack             | Web      |                     |
+| ✅    | Microsoft Teams   | Android  |                     |
+| ?     | Microsoft Teams   | iOS      |                     |
+| ✅    | Microsoft Teams   | macOS    |                     |
+| ?     | Microsoft Teams   | Windows  |                     |
+| ?     | Microsoft Teams   | Web      |                     |
+| ✅    | Discord           | Android  |                     |
+| ?     | Discord           | iOS      |                     |
+| ✅    | Discord           | macOS    |                     |
+| ?     | Discord           | Windows  |                     |
+| 🙅    | Discord           | Web      |                     |
+| ?     | Telegram          | Android  |                     |
+| ?     | Telegram          | iOS      |                     |
+| ?     | Telegram          | Web      |                     |
+| ✅    | FB Messenger      | Android  |                     |
+| ✅    | FB Messenger      | iOS      |                     |
+| 🙅    | Instagram DM      | Android  |                     |
+| ✅    | Instagram DM      | iOS      |                     |
+| ✅    | LinkedIn Chat     | Android  |                     |
+| ?     | LinkedIn Chat     | iOS      |                     |
+| ✅    | LinkedIn Chat     | Web      |                     |
+| 🙅    | Google Meet Chat  | Android  |                     |
+| ?     | Google Meet Chat  | iOS      |                     |
+| 🙅    | Google Meet Chat  | Web      |                     |
+| ?     | Zoom Chat         | Android  |                     |
+| ?     | Zoom Chat         | iOS      |                     |
+| ?     | Zoom Chat         | macOS    |                     |
+| ?     | Zoom Chat         | Windows  |                     |
+| ?     | Zoom Chat         | Web      |                     |
+| 🙅    | Twitter (DM)      | Android  |                     |
+| 🙅    | Twitter (Tweet)   | Android  |                     |
+| 🙅    | Twitter (DM)      | Web      |                     |
+| 🙅    | Twitter (Tweet)   | Web      |                     |
+| ✅    | Lunchclub Chat    | Web      |                     |
