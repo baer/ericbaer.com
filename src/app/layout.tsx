@@ -9,6 +9,7 @@ import StackOverflowIcon from "@/components/icons/stack-overflow";
 import LinkedInIcon from "@/components/icons/linkedin";
 import TwitterIcon from "@/components/icons/twitter";
 import Pencil from "@/components/icons/pencil";
+import GithubIcon from "@/components/icons/github";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,12 +65,18 @@ export default function RootLayout({
               >
                 <LinkedInIcon />
               </Link>
+
               <Link
                 aria-label="Twitter link"
                 href="https://twitter.com/ebaerbaerbaer"
               >
                 <TwitterIcon />
               </Link>
+
+              <Link aria-label="Github link" href="https://github.com/baer">
+                <GithubIcon />
+              </Link>
+
               <Link
                 aria-label="StackOverflow link"
                 href="https://stackoverflow.com/users/856873/baer"

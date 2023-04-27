@@ -65,7 +65,7 @@ EmoLink generates UUIDs on the client, encodes them to emoji, and uses that as a
 
 The only cost is that where a typical URL shortener needs 7 chars, this requires 11. But you can't put a price on fun!
 
-And if you were curious, here's some code:
+The full repo is [on Github](https://github.com/baer/emo-link), but here's code to make it happen.
 
 ```js
 function hexToBinary(hexNum) {
