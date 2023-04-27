@@ -3,11 +3,8 @@ title: "EmoLink - An emoji URL shortener"
 excerpt: "How I used new(ish) Internationalization standards to make a backendless, offline-capable, collision-free URL shortener."
 coverImage: "/assets/blog/emo-link/cover.png"
 date: "2023-04-24T21:48:04.629Z"
-author:
-  name: Eric Baer
-  picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
+  url: "/assets/blog/emo-link/og-image.png"
 ---
 
 # Introducing [EmoLink](https://emol.ink/)
