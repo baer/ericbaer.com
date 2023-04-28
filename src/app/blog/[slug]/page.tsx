@@ -3,6 +3,7 @@ import "@/css/prism.css";
 import markdownStyles from "./markdown-styles.module.css";
 
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import Container from "@/components/container/container";
 import { getAllPosts, getPostBySlug } from "../lib";
@@ -88,9 +89,24 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const { title } = await getPostBySlug(slug);
+  const { title, ogImage, excerpt } = await getPostBySlug(slug);
 
   return {
     title,
+    openGraph: {
+      title,
+      description: excerpt,
+      url: `https://ericbaer.com/blog/${slug}`,
+      siteName: "Baerly Working",
+      images: [
+        {
+          url: ogImage?.url || "",
+          width: ogImage?.width,
+          height: ogImage?.height,
+        },
+      ],
+      locale: "en-US",
+      type: "website",
+    },
   };
 }
