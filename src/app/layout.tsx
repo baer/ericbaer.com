@@ -3,6 +3,7 @@ import styles from "./layout.module.css";
 
 import Link from "next/link";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 import joinClasses from "@/util/join-classes";
 import StackOverflowIcon from "@/components/icons/stack-overflow";
@@ -27,10 +28,24 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Cloudflare Web Analytics */}
-        <script
-          defer
+        <Script
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "c6578cc0825e4071a6f030a9b5267436"}'
+        />
+
+        {/* Google Analytics 4 */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-G38EE4N6QY" />
+        <Script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-G38EE4N6QY');
+          `,
+          }}
         />
       </head>
       <body className={inter.className}>
