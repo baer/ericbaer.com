@@ -15,6 +15,7 @@ import GithubIcon from "@/components/icons/github";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL("https://ericbaer.com"),
   title: "Baerly Working",
   description: "Eric Baer's personal website and blog",
 };

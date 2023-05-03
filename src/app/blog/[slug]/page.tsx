@@ -92,8 +92,6 @@ export async function generateMetadata({
   const { title, ogImage, excerpt } = await getPostBySlug(slug);
 
   return {
-    // TODO: Move this to Layout
-    metadataBase: new URL("https://ericbaer.com"),
     title,
     openGraph: {
       title,
@@ -109,6 +107,13 @@ export async function generateMetadata({
       ],
       locale: "en-US",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: excerpt,
+      creator: "@ebaerbaerbaer",
+      images: [...(ogImage?.url ? [ogImage?.url] : [])],
     },
   };
 }

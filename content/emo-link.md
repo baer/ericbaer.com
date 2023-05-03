@@ -5,8 +5,8 @@ coverImage: "/assets/blog/emo-link/cover.png"
 date: "2023-05-03T11:00:00.000Z"
 ogImage:
   url: "/assets/blog/emo-link/og-image.png"
-  width: 800
-  height: 400
+  width: 1600
+  height: 800
 ---
 
 # Introducing [EmoLink](https://emol.ink/)
